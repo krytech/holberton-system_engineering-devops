@@ -1,2 +1,2 @@
 #!/blin/bash
-BETTY=Holberton
+BETTY="Holberton"

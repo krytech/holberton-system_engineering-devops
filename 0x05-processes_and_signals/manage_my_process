@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# A bash script that writes an infinite loop "I am alive!" to
+# a file: /tmp/my_process; used with 101-manage_my_process
+while true
+do
+    echo "I am alive!" >> /tmp/my_process
+    sleep 2
+done

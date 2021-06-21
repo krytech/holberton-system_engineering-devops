@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# Manages manage_my_process: start, stop, restart
+argv1=$1
+file="/var/run/my_process.pid"
+
+start_createFile()
+{
+    ./manage_my_process &
+    echo "$!" > "$file"
+}
+kill_rmFile()
+{
+    sudo pkill -f "./manage_my_process"
+    rm "$file"
+}
+case "$argv1" in
+    start) echo "manage_my_process started"
+	start_createFile
+	;;
+    stop) echo "manage_my_process stopped"
+	kill_rmFile
+	;;
+    restart) echo "manage_my_process restarted"
+	kill_rmFile
+	start_createFile
+	;;
+    *) echo "Usage: manage_my_process {start|stop|restart}"
+	;;
+esac

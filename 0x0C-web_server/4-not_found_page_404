@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# Configure a Nginx server with a HTTP 404 error
 sudo apt-get -y update
 sudo apt-get -y install nginx
 mkdir -p /var/www/html

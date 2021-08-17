@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Install 'nginx' on 'web-01' server
+sudo apt-get -y update
+sudo apt-get -y install nginx
+mkdir -p /var/www/html
+sudo service nginx start
+sudo sh -c 'echo "Holberton School for the win!" > /var/www/html/index.html'

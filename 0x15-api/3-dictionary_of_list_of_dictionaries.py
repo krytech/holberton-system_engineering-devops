@@ -6,7 +6,7 @@ import json
 import requests
 
 
-def inquiry_json():
+def inquiry_all_json():
     """Returns API data"""
     url = "https://jsonplaceholder.typicode.com/"
     users = requests.get(url + "users").json()
@@ -23,4 +23,4 @@ def inquiry_json():
 
 
 if __name__ == "__main__":
-    inquiry_json()
+    inquiry_all_json()

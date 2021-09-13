@@ -16,7 +16,7 @@ def inquiry_json():
             u.get('id'): [{
                 'task': t.get('title'),
                 'completed': t.get('completed'),
-                'username': t.get('username')
+                'username': u.get('username')
             } for t in requests.get(url + "todos",
                                     params={"userId": u.get('id')}).json()]
             for u in users}, jsonfile)

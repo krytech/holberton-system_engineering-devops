@@ -16,7 +16,6 @@ def inquiry():
     NUMBER_OF_DONE_TASKS = 0
     TOTAL_NUM_OF_TASKS = 0
     TASK_TITLE = []
-
     for t in todos:
         if t.get('userId') == int(argv[1]):
             TOTAL_NUM_OF_TASKS += 1
